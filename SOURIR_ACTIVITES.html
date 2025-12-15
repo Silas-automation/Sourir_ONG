@@ -10,23 +10,58 @@
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
-  <div class="container header-inner">
-    <div class="logo">LOGO</div>
+    <div class="container header-inner">
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="SOURIR_ACCUEIL.html">Accueil</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="SOURIR_ACTUALITES.html">Actualités</a></li>
-        <li><a class="active" href="#">Activités</a></li>
-        <li><a href="#">S'engager</a></li>
-        <li><a href="SOURIR_CONTACTEZ-NOUS.html">Contact</a></li>
-      </ul>
-    </nav>
+      <!-- Logo carré vert -->
+     <div class="logo-box">
+    <img src="e:\Projet web Prof A\IMG-20251202-WA0005.png" alt="Logo de Sourir ONG">
+</div>
 
-    <a href="#" class="btn-don">Faire un don</a>
-  </div>
-</header>
+
+      <!-- MENU DE NAVIGATION PRINCIPAL -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="SOURIR_ACCUEIL.html">Accueil</a></li>
+
+          <!-- Sous-menu déroulant "À propos" comme dans la maquette -->
+    <li class="dropdown">
+     <a href="#" id="apropos-btn">À propos </a>
+     <ul class="dropdown-menu">
+       <li><a href="SOURIR_QUI_SOMMES-NOUS.html">Qui sommes-nous</a></li>
+       <li><a href="SOURIR_RAPPORT_ ET_PUBLICATION.html">Rapports & Publications</a></li>
+       <li><a href="SOURIR_GALERIE.HTML">Galerie</a></li>
+       <li><a href="SOURIR_NOS_OBJECTIFS.html">Nos objectifs</a></li>
+     </ul>
+     <script>
+  const btn = document.getElementById("aproposBtn");
+  const menu = document.getElementById("aproposMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+
+    </li>
+
+
+          <li><a href="SOURIR_ACTUALITES.html">Actualités</a></li>
+          <li><a href="SOURIR_ACTIVITES.html">Activités</a></li>
+          <li><a href="SOURIR_S'ENGAGER.html">S'engager</a></li>
+          <li><a href="SOURIR_CONTACTEZ-NOUS.html">Contact</a> </li>
+        </ul>
+      </nav>
+
+      <!-- Bouton faire un don -->
+      <a class="btn-don" href="SOURIR_FAIRE_UN_DON.html">Faire un don</a>
+    </div>
+    <div class="top-banner"></div><!-- Bande couleur top -->
+  </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
@@ -137,37 +172,54 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="container footer-grid">
+    <div class="container footer-grid">
 
-    <div>
-      <h4>SOURIR ONG</h4>
-      <p>Organisation humanitaire dédiée à l'amélioration des conditions de vie.</p>
+      <!-- Colonne À propos -->
+      <div class="footer-col">
+        <h3>À PROPOS</h3>
+        <p>SOURIR ONG<br>Organisation humanitaire dédiée à<br> l'amélioration des conditions de vie</p>
+      </div>
+
+      <!-- Liens rapides -->
+      <div class="footer-col">
+        <h3>LIENS RAPIDES</h3>
+        <ul>
+          <a href="SOURIR_ACCUEIL.html"><li>Accueil</li></a>
+          <a href="SOURIR_QUI_SOMMES-NOUS.html"><li>Qui sommes-nous</li></a>
+          <a href="SOURIR_NOS_OBJECTIFS.html"><li>Nos objectifs</li></a>
+          <a href="SOURIR_ACTUALITES.html"><li>Actualités</li></a>
+          <a href="SOURIR_S'ENGAGER.html"><li>S'engager</li></a>
+          <a href="SOURIR_CONTACTEZ-NOUS.html"><li>Contact</li></a>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h3>CONTACT</h3>
+        <ul>
+          <li>📍 Tranza, Bénin</li>
+          <li>☎ +229 01 95 27 50 58</li>
+          <li>✉ atajibga@gmail.com</li>
+          <li>🕒 Lun-Ven : 8h-17h</li>
+        </ul>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="footer-col">
+        <h3>SUIVEZ-NOUS</h3>
+        <div class="socials">● ● ● ●</div>
+      </div>
+
     </div>
 
-    <div>
-      <h4>Liens rapides</h4>
-      <ul>
-        <li>Accueil</li>
-        <li>Qui sommes-nous</li>
-        <li>Nos objectifs</li>
-        <li>Actualités</li>
-      </ul>
+    <!-- Bandeau copyright -->
+    <div class="copyright">
+      © 2025 SOURIR ONG - Tous droits réservés<br>
+      Mentions légales | Politique de confidentialité
     </div>
 
-    <div>
-      <h4>Contact</h4>
-      <p>📍 Tranza, Bénin<br>📞 +229 01 95 27 50 58<br>✉️ info@sourir-ong.org</p>
-    </div>
+  </footer>
 
-    <div>
-      <h4>Suivez-nous</h4>
-      <div class="socials">● ● ● ●</div>
-    </div>
-
-  </div>
-
-  <p class="copyright">© 2025 SOURIR ONG - Tous droits réservés</p>
-</footer>
 
 </body>
 </html>

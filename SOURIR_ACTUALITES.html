@@ -4,32 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actualités | SOURIR ONG</title>
-  <link rel="stylesheet" href="SOURIR_ACCUEIL.css">
+  <link rel="stylesheet" href="SOURIR_ACTUALITES.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-inner container">
-    <div class="logo-box"><img src="e:\Projet web Prof A\IMG-20251202-WA0005.png" alt="SOURIR ONG"></div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="SOURIR_ACCUEIL.html">Accueil</a></li>
-        <li class="dropdown">
-          <a href="#">À propos ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="SOURIR_QUI_SOMMES-NOUS.html">Qui sommes-nous</a></li>
-            <li><a href="SOURIR_NOS_OBJECTIFS.html">Nos objectifs</a></li>
-          </ul>
-        </li>
-        <li><a href="SOURIR_ACTUALITES.html" class="active">Actualités</a></li>
-        <li><a href="activites.html">Activités</a></li>
-        <li><a href="SOURIR_CONTACTEZ-NOUS.html">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="#" class="btn-don">Faire un don</a>
-  </div>
-</header>
+    <div class="container header-inner">
 
+      <!-- Logo carré vert -->
+     <div class="logo-box">
+    <img src="e:\Projet web Prof A\IMG-20251202-WA0005.png" alt="Logo de Sourir ONG">
+</div>
+
+
+      <!-- MENU DE NAVIGATION PRINCIPAL -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="SOURIR_ACCUEIL.html">Accueil</a></li>
+
+          <!-- Sous-menu déroulant "À propos" comme dans la maquette -->
+    <li class="dropdown">
+     <a href="#" id="apropos-btn">À propos </a>
+     <ul class="dropdown-menu">
+       <li><a href="SOURIR_QUI_SOMMES-NOUS.html">Qui sommes-nous</a></li>
+       <li><a href="SOURIR_RAPPORT_ ET_PUBLICATION.html">Rapports & Publications</a></li>
+       <li><a href="SOURIR_GALERIE.HTML">Galerie</a></li>
+       <li><a href="SOURIR_NOS_OBJECTIFS.html">Nos objectifs</a></li>
+     </ul>
+     <script>
+  const btn = document.getElementById("aproposBtn");
+  const menu = document.getElementById("aproposMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+
+    </li>
+
+
+          <li><a href="SOURIR_ACTUALITES.html">Actualités</a></li>
+          <li><a href="SOURIR_ACTIVITES.html">Activités</a></li>
+          <li><a href="SOURIR_S'ENGAGER.html">S'engager</a></li>
+          <li><a href="SOURIR_CONTACTEZ-NOUS.html">Contact</a> </li>
+        </ul>
+      </nav>
+
+      <!-- Bouton faire un don -->
+      <a class="btn-don" href="SOURIR_FAIRE_UN_DON.html">Faire un don</a>
+    </div>
+    <div class="top-banner"></div><!-- Bande couleur top -->
+  </header>
 <section class="hero" style="background:#b7d1c8">
   <h1>Actualités</h1>
   <p class="hero-sub">Restez informé de nos dernières actions et événements</p>
@@ -93,30 +124,54 @@
 </section>
 
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>SOURIR ONG</h3>
-      <p>Organisation humanitaire dédiée à l’amélioration des conditions de vie.</p>
+    <div class="container footer-grid">
+
+      <!-- Colonne À propos -->
+      <div class="footer-col">
+        <h3>À PROPOS</h3>
+        <p>SOURIR ONG<br>Organisation humanitaire dédiée à<br> l'amélioration des conditions de vie</p>
+      </div>
+
+      <!-- Liens rapides -->
+      <div class="footer-col">
+        <h3>LIENS RAPIDES</h3>
+        <ul>
+          <a href="SOURIR_ACCUEIL.html"><li>Accueil</li></a>
+          <a href="SOURIR_QUI_SOMMES-NOUS.html"><li>Qui sommes-nous</li></a>
+          <a href="SOURIR_NOS_OBJECTIFS.html"><li>Nos objectifs</li></a>
+          <a href="SOURIR_ACTUALITES.html"><li>Actualités</li></a>
+          <a href="SOURIR_S'ENGAGER.html"><li>S'engager</li></a>
+          <a href="SOURIR_CONTACTEZ-NOUS.html"><li>Contact</li></a>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h3>CONTACT</h3>
+        <ul>
+          <li>📍 Tranza, Bénin</li>
+          <li>☎ +229 01 95 27 50 58</li>
+          <li>✉ atajibga@gmail.com</li>
+          <li>🕒 Lun-Ven : 8h-17h</li>
+        </ul>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="footer-col">
+        <h3>SUIVEZ-NOUS</h3>
+        <div class="socials">● ● ● ●</div>
+      </div>
+
     </div>
-    <div>
-      <h3>Liens rapides</h3>
-      <ul>
-        <li>Accueil</li>
-        <li>Actualités</li>
-        <li>Contact</li>
-      </ul>
+
+    <!-- Bandeau copyright -->
+    <div class="copyright">
+      © 2025 SOURIR ONG - Tous droits réservés<br>
+      Mentions légales | Politique de confidentialité
     </div>
-    <div>
-      <h3>Contact</h3>
-      <p>Tranza, Bénin<br>+229 01 95 27 50 58<br>ataigba@gmail.com</p>
-    </div>
-    <div>
-      <h3>Suivez-nous</h3>
-      <div class="socials">● ● ● ●</div>
-    </div>
-  </div>
-  <div class="copyright">© 2025 SOURIR ONG – Tous droits réservés</div>
-</footer>
+
+  </footer>
+
 
 </body>
 </html>
