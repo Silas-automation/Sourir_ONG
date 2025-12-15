@@ -1,0 +1,280 @@
+<!-- ============================= -->
+<!-- index.html (version corrigée + commentée) -->
+<!-- ============================= -->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SouRIR ONG - Accueil</title>
+  <!-- Importation de la police -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="SOURIR_ACCUEIL.css">
+
+</head>
+
+<body>
+
+  <!-- ============================= -->
+  <!-- HEADER IDENTIQUE À LA MAQUETTE -->
+  <!-- ============================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo carré vert -->
+     <div class="logo-box">
+    <img src="e:\Projet web Prof A\IMG-20251202-WA0005.png" alt="Logo de Sourir ONG">
+</div>
+
+
+      <!-- MENU DE NAVIGATION PRINCIPAL -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="SOURIR_ACCUEIL.html">Accueil</a></li>
+
+          <!-- Sous-menu déroulant "À propos" comme dans la maquette -->
+    <li class="dropdown">
+     <a href="#" id="apropos-btn">À propos </a>
+     <ul class="dropdown-menu">
+       <li><a href="SOURIR_QUI_SOMMES-NOUS.html">Qui sommes-nous</a></li>
+       <li><a href="SOURIR_RAPPORT_ ET_PUBLICATION.html">Rapports & Publications</a></li>
+       <li><a href="SOURIR_GALERIE.HTML">Galerie</a></li>
+       <li><a href="SOURIR_NOS_OBJECTIFS.html">Nos objectifs</a></li>
+     </ul>
+     <script>
+  const btn = document.getElementById("aproposBtn");
+  const menu = document.getElementById("aproposMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+
+    </li>
+
+
+          <li><a href="SOURIR_ACTUALITES.html">Actualités</a></li>
+          <li><a href="SOURIR_ACTIVITES.html">Activités</a></li>
+          <li><a href="SOURIR_S'ENGAGER.html">S'engager</a></li>
+          <li><a href="SOURIR_CONTACTEZ-NOUS.html">Contact</a> </li>
+        </ul>
+      </nav>
+
+      <!-- Bouton faire un don -->
+      <a class="btn-don" href="SOURIR_FAIRE_UN_DON.html">Faire un don</a>
+    </div>
+    <div class="top-banner"></div><!-- Bande couleur top -->
+  </header>
+
+
+  <!-- ============================= -->
+  <!-- SECTION HERO / ENTÊTE LARGE   -->
+  <!-- ============================= -->
+  <section class="hero">
+    <h1>SouRIR ONG</h1>
+    <p class="hero-sub">"Ensemble pour un sourire durable"</p>
+    <div class="hero-buttons">
+      <a class="btn-yellow" href="SOURIR_FAIRE_UN_DON.html">Faire un don</a>
+      <a class="btn-white" href="SOURIR_S'ENGAGER.html">S'engager avec nous</a>
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- SECTION QUI SOMMES-NOUS       -->
+  <!-- ============================= -->
+  <section class="about-section container">
+
+    <!-- Image ONG à gauche -->
+    <div class="about-img">[Image ONG]</div>
+
+    <!-- Texte à droite -->
+    <div class="about-text">
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        "SOURIR ONG est une organisation humanitaire dédiée à <br>
+        l'amélioration des conditions de vie des communautés vulnérables. <br><br>
+        Depuis notre création, nous œuvrons pour un avenir meilleur à <br>
+        travers l'éducation, la santé et le développement durable."
+      </p>
+      <a class="btn-green" href="SOURIR_QUI_SOMMES-NOUS.html">En savoir plus</a>
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- ACTUALITÉS RÉCENTES           -->
+  <!-- ============================= -->
+  <section class="news-section container">
+    <h2 class="section-title">Actualités récentes</h2>
+
+    <div class="news-grid">
+
+      <!-- Carte actualité -->
+      <article class="news-card">
+        <div class="news-img">[Image actualité]</div>
+        <div class="news-body">
+          <h3>Nouvelle école construite à [Village]</h3>
+          <p>"Grâce au soutien de nos donateurs, nous avons inauguré une nouvelle école primaire…"</p>
+          <a class="btn-read" href="#">Lire la suite</a>
+          <span class="date">15 Octobre 2025</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-img">[Image actualité]</div>
+        <div class="news-body">
+          <h3>Nouvelle école construite à [Village]</h3>
+          <p>"Grâce au soutien de nos donateurs, nous avons inauguré une nouvelle école primaire…"</p>
+          <a class="btn-read" href="#">Lire la suite</a>
+          <span class="date">15 Octobre 2025</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-img">[Image actualité]</div>
+        <div class="news-body">
+          <h3>Nouvelle école construite à [Village]</h3>
+          <p>"Grâce au soutien de nos donateurs, nous avons inauguré une nouvelle école primaire…"</p>
+          <a class="btn-read" href="#">Lire la suite</a>
+          <span class="date">15 Octobre 2025</span>
+        </div>
+      </article>
+
+    </div>
+
+    <a class="view-all" href="SOURIR_ACTUALITES.html">Voir toutes les actualités</a>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- ACTIONS PRINCIPALES           -->
+  <!-- ============================= -->
+  <section class="actions-section container">
+    <h2 class="section-title">Nos actions principales</h2>
+
+    <div class="actions-grid">
+
+      <!-- Action 1 -->
+      <div class="action-card">
+        <div class="icon-circle">🎓</div>
+        <h3>Éducation</h3>
+        <p>Accès à l'éducation pour tous les enfants</p>
+      </div>
+
+      <!-- Action 2 -->
+      <div class="action-card">
+        <div class="icon-circle">🩺</div>
+        <h3>Santé</h3>
+        <p>Accès aux soins pour tous</p>
+      </div>
+
+      <!-- Action 3 -->
+      <div class="action-card">
+        <div class="icon-circle">🌱</div>
+        <h3>Environnement</h3>
+        <p>Protection et gestion durable</p>
+      </div>
+
+      <!-- Action 4 -->
+      <div class="action-card">
+        <div class="icon-circle">🤝</div>
+        <h3>Insertion</h3>
+        <p>Soutien aux familles vulnérables</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- TÉMOIGNAGES                   -->
+  <!-- ============================= -->
+  <section class="testimonials-section container">
+    <h2 class="section-title">Ils Témoignent</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="test-card">
+        <div class="test-img"></div>
+        <p>"Grâce à SOURIR ONG, mes enfants peuvent maintenant aller à l'école."</p>
+        <span class="author">- Amina, Tranza</span>
+      </div>
+
+      <div class="test-card">
+        <div class="test-img"></div>
+        <p>"Grâce à SOURIR ONG, mes enfants peuvent maintenant aller à l'école."</p>
+        <span class="author">- Amina, Tranza</span>
+      </div>
+
+      <div class="test-card">
+        <div class="test-img"></div>
+        <p>"Grâce à SOURIR ONG, mes enfants peuvent maintenant aller à l'école."</p>
+        <span class="author">- Amina, Tranza</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- FOOTER COMPLET IDENTIQUE      -->
+  <!-- ============================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Colonne À propos -->
+      <div class="footer-col">
+        <h3>À PROPOS</h3>
+        <p>SOURIR ONG<br>Organisation humanitaire dédiée à<br> l'amélioration des conditions de vie</p>
+      </div>
+
+      <!-- Liens rapides -->
+      <div class="footer-col">
+        <h3>LIENS RAPIDES</h3>
+        <ul>
+          <li>Accueil</li>
+          <li>Qui sommes-nous</li>
+          <li>Nos objectifs</li>
+          <li>Actualités</li>
+          <li>S'engager</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h3>CONTACT</h3>
+        <ul>
+          <li>📍 Tranza, Bénin</li>
+          <li>☎ +229 01 95 27 50 58</li>
+          <li>✉ atajibga@gmail.com</li>
+          <li>🕒 Lun-Ven : 8h-17h</li>
+        </ul>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="footer-col">
+        <h3>SUIVEZ-NOUS</h3>
+        <div class="socials">● ● ● ●</div>
+      </div>
+
+    </div>
+
+    <!-- Bandeau copyright -->
+    <div class="copyright">
+      © 2025 SOURIR ONG - Tous droits réservés<br>
+      Mentions légales | Politique de confidentialité
+    </div>
+
+  </footer>
+
+</body>
+</html>
